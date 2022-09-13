@@ -14,14 +14,16 @@ class CharactersViewModel(
 
     private val _screenState: MutableStateFlow<ScreenState> = MutableStateFlow(ScreenState.Loading)
     val screenState: Flow<ScreenState> = _screenState
+    private lateinit var list: List<Character>
 
-    private val coroutineExceptionHandler = CoroutineExceptionHandler { coroutineContext, throwable ->
-        Log.d("CharactersViewModel", "Error retrieving characters: ${throwable.message}")
-    }
+    private val coroutineExceptionHandler =
+        CoroutineExceptionHandler { coroutineContext, throwable ->
+            Log.d("CharactersViewModel", "Error retrieving characters: ${throwable.message}")
+        }
 
     init {
         viewModelScope.launch(coroutineExceptionHandler) {
-            val list = charactersService.getCharacters()
+            list = charactersService.getCharacters()
             _screenState.value = ScreenState.ShowCharacters(list)
         }
     }

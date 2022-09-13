@@ -77,5 +77,9 @@ dependencies {
     annotationProcessor("androidx.room:room-compiler:2.4.3")
     kapt("androidx.room:room-compiler:2.4.3")
 
+    //HILT
+    implementation ("com.google.dagger:hilt-android:2.35.1")
+    kapt ("com.google.dagger:hilt-compiler:2.35.1")
+
 
 }

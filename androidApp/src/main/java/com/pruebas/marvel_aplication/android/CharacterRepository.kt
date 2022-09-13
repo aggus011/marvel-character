@@ -1,9 +1,12 @@
 package com.pruebas.marvel_aplication.android
 
+import javax.inject.Inject
 
-class CharacterRepository constructor(val characterDAO: CharacterDAO) {
 
-    suspend fun insertCharacter(character: Character){
-        characterDAO.insert(character)
+class CharacterRepository @Inject constructor(val characterDAO: CharacterDAO) {
+
+    suspend fun insertCharacter(list: MutableList<Character>) {
+        for (i in list)
+            characterDAO.insert(i)
     }
 }
