@@ -16,6 +16,12 @@ class CharactersService(
         return sort(characters)
     }
 
+    fun insertCharacter(list: List<Character>){
+        for (i in list){
+
+        }
+    }
+
     private fun md5(string: String): String {
         val MD5 = "MD5"
         try {

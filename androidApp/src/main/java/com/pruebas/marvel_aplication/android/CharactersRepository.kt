@@ -1,6 +1,11 @@
 package com.pruebas.marvel_aplication.android
 
-interface CharactersRepository{
+import javax.inject.Inject
+
+interface CharactersRepository {
+
+    @Inject
+    var myClass:CharacterDAO
 
     suspend fun getCharacters(timestamp: Long, md5: String): List<Character>
 
