@@ -1,7 +1,5 @@
 package com.pruebas.marvel_aplication.android
 
-import ar.edu.unlam.marvelcharacters.PrivateKey
-import ar.edu.unlam.marvelcharacters.PublicKey
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 

@@ -11,7 +11,6 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
-import ar.edu.unlam.marvelcharacters.CharactersViewModelFactory
 import com.pruebas.marvel_aplication.android.databinding.ActivityCharactersBinding
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -54,6 +53,7 @@ class CharactersActivity : AppCompatActivity() {
 
     private fun showCharacters(list: List<Character>) {
         charactersAdapter.submitList(list)
+
     }
 
 }

@@ -1,5 +1,6 @@
 package com.pruebas.marvel_aplication.android
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -19,6 +20,7 @@ class CharactersAdapter : RecyclerView.Adapter<CharacterViewHolder>() {
 
     override fun getItemCount() = charactersList.size
 
+    @SuppressLint("NotifyDataSetChanged")
     fun submitList(characters: List<Character>) {
         with(charactersList) {
             clear()
