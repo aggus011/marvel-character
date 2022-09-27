@@ -2,9 +2,11 @@ package com.pruebas.marvel_aplication.android
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity (tableName = "saved_character")
 class Character() {
+    @PrimaryKey
     @ColumnInfo(name = "id")
     var id: Long = 1
 

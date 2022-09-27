@@ -7,8 +7,9 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class CharactersViewModel(
+class CharactersViewModel (
     private val charactersService: CharactersService
 ) : ViewModel() {
 

@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     kotlin("android")
     id ("kotlin-kapt")
+    kotlin("plugin.serialization") version "1.7.10"
 }
 
 android {
@@ -75,11 +76,16 @@ dependencies {
     //room
     implementation("androidx.room:room-runtime:2.4.3")
     annotationProcessor("androidx.room:room-compiler:2.4.3")
+    implementation ("androidx.room:room-ktx:2.4.3")
     kapt("androidx.room:room-compiler:2.4.3")
 
     //HILT
     implementation ("com.google.dagger:hilt-android:2.35.1")
     kapt ("com.google.dagger:hilt-compiler:2.35.1")
+
+    //Serializable
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
+
 
 
 }
